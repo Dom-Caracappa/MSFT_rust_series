@@ -37,3 +37,22 @@ fn main(){
 ```
 
 - Conventions for constants dictate that names should be *capitalized*, with *underscores* between words.
+- Constants can only be set to an **expression**, not the result of a **function call** or any other value that is computed at **runtime**.
+- Constants are valid for the entire runtime of an application, within the scope they were declared. 
+
+# Shadowing a Variable
+
+- Declare a *new variable* with the same name as a *previous variable* but created with a new **binding**. 
+- This is referred to as **shadowing** because the new variable *shadows* the previous variable. 
+- The previous variable still exists, however it cannot be referred to within this scope any longer. 
+
+```rust
+// declare a new variable with the same name as a previous variable, also creating a new binding
+
+fn main() {
+    let x = 5;
+    let x = x + 1; // x is now 6
+}
+```
+
+- The variable's value can be updated using the **let** keyword.
